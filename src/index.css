@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+h2{
+  margin: 10px;
+  /* color: aliceblue; */
+}
+h3{
+  margin: 10px;
+}
+.main_container {
+  text-align: center;
+  background-color: rgb(216, 216, 216);
+  padding: 5px;
+  border-radius: 20px;
+  height: max-content;
+}
+.input_field {
+  min-width: 400px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.add_btn {
+  min-width: 100px;
+  height: 30px;
+  margin-left: 5px;
+  background-color: #6270ef;
+  color: aliceblue;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Task-container {
+  display: flex;
+  justify-content: space-between;
+}
+.to-do-list {
+  height: fit-content;
+  min-width: 300px;
+  min-height: 100px;
+  background-color: rgb(177, 176, 175);
+  margin: 10px;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+.task-item {
+  margin: 10px;
+  border: 2px solid rgb(128, 0, 6);
+  border-radius: 10px;
+  list-style: none;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  text-wrap: wrap;
+  align-items: center;
+  background-color: rgb(223, 148, 148);
+}
+.removed-list {
+  height: fit-content;
+  min-width: 300px;
+  min-height: 100px;
+  background-color: rgb(177, 176, 175);
+  margin: 10px;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+.removed-item {
+  margin: 10px;
+  border: 2px solid rgb(0, 109, 0);
+  border-radius: 10px;
+  list-style: none;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  text-wrap: wrap;
+  align-items: center;
+  background-color: rgb(114, 216, 83);
+}
+.remove,
+.up-btn,
+.down-btn {
+  border: none;
+  border-radius: 5px;
+  width: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  background: none;
+  font-size: 20px;
+}
