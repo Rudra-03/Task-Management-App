@@ -1,40 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: black;
+  background: url(./src/assets/bgImg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  z-index: -1
 }
-h2{
+
+h2 {
   margin: 10px;
-  /* color: aliceblue; */
 }
-h3{
+
+h3 {
   margin: 10px;
 }
+
 .main_container {
   text-align: center;
-  /* background-color: rgb(10, 10, 10); */
   backdrop-filter: blur(5px);
   padding: 5px;
   border-radius: 20px;
   height: max-content;
   border: 2px solid black;
 }
+
 .input_field {
   min-width: 400px;
   padding: 10px;
   border: none;
   border-radius: 10px;
 }
+
 .add_btn {
   min-width: 100px;
   margin-left: 5px;
@@ -43,10 +52,12 @@ h3{
   border: none;
   cursor: pointer;
 }
+
 .Task-container {
   display: flex;
   justify-content: space-between;
 }
+
 .to-do-list {
   height: fit-content;
   min-width: 300px;
@@ -56,6 +67,7 @@ h3{
   border: 2px solid rgb(141, 140, 140);
   border-radius: 10px;
 }
+
 .task-item {
   margin: 10px;
   /* border: 2px solid rgb(182, 25, 33); */
@@ -69,6 +81,7 @@ h3{
   background-color: rgb(250, 142, 142);
   color: rgb(52, 39, 53);
 }
+
 .removed-list {
   height: fit-content;
   min-width: 300px;
@@ -78,6 +91,7 @@ h3{
   border: 2px solid grey;
   border-radius: 10px;
 }
+
 .removed-item {
   margin: 10px;
   border-radius: 10px;
@@ -89,6 +103,7 @@ h3{
   /* align-self: center; */
   background-color: rgb(123, 224, 92);
 }
+
 .remove,
 .up-btn,
 .down-btn {
