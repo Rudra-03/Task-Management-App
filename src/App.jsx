@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div className="main_container">
-      <h2>ToDo List</h2>
+      <h2 className="text-4xl mb-10 text-black" >ToDo List</h2>
       <div>
         <input
           type="text"
