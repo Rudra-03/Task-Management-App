@@ -31,20 +31,16 @@ h3{
 }
 .input_field {
   min-width: 400px;
-  height: 40px;
   padding: 10px;
   border: none;
   border-radius: 10px;
 }
 .add_btn {
   min-width: 100px;
-  height: 30px;
   margin-left: 5px;
-  background-color: #6270ef;
+  background-color: rgb(37, 99, 235);
   color: aliceblue;
   border: none;
-  border-radius: 50px;
-  font-size: 16px;
   cursor: pointer;
 }
 .Task-container {
@@ -55,43 +51,43 @@ h3{
   height: fit-content;
   min-width: 300px;
   min-height: 100px;
-  background-color: rgb(184, 188, 189);
+  background-color: rgb(212, 210, 208);
   margin: 10px;
-  border: 2px solid grey;
+  border: 2px solid rgb(141, 140, 140);
   border-radius: 10px;
 }
 .task-item {
   margin: 10px;
-  border: 2px solid rgb(128, 0, 6);
+  /* border: 2px solid rgb(182, 25, 33); */
   border-radius: 10px;
   list-style: none;
-  padding: 4px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   text-wrap: wrap;
   align-items: center;
-  background-color: rgb(223, 148, 148);
+  background-color: rgb(250, 142, 142);
+  color: rgb(52, 39, 53);
 }
 .removed-list {
   height: fit-content;
   min-width: 300px;
   min-height: 100px;
-  background-color: rgb(177, 176, 175);
+  background-color: rgb(212, 210, 208);
   margin: 10px;
   border: 2px solid grey;
   border-radius: 10px;
 }
 .removed-item {
   margin: 10px;
-  border: 2px solid rgb(0, 109, 0);
   border-radius: 10px;
   list-style: none;
-  padding: 4px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   text-wrap: wrap;
-  align-items: center;
-  background-color: rgb(114, 216, 83);
+  /* align-self: center; */
+  background-color: rgb(123, 224, 92);
 }
 .remove,
 .up-btn,

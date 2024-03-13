@@ -23,8 +23,8 @@ function App() {
   };
   const deleteTask = (index) => {
     if (removetasks.length == 1) localStorage.removeItem("remove");
-    setRemoveTasks((r) => r.filter((_, i) => i != index))
-  }
+    setRemoveTasks((r) => r.filter((_, i) => i != index));
+  };
   const remove_icon = (
     <FontAwesomeIcon icon={faXmark} size="lg" style={{ color: "#50668b" }} />
   );
@@ -66,35 +66,43 @@ function App() {
 
   return (
     <div className="main_container">
-      <h2 className="text-4xl mb-10 text-black" >ToDo List</h2>
-      <div>
+      <h2 className="text-4xl mb-10 text-black underline">ToDo List</h2>
+      <div className="flex justify-center">
         <input
           type="text"
           id="input-task"
           placeholder="Enter Task"
-          className="input_field"
+          className="input_field h-12 text-xl outline-none"
         />
-        <button onClick={addTask} className="add_btn">
+        <button onClick={addTask} className="add_btn h-12 rounded-2xl text-lg">
           Add task
         </button>
       </div>
       <div className="Task-container">
         <div className="to-do-list">
-          <h3>Tasks</h3>
+          <h3 className="text-2xl w-fit bg-red-400  mx-auto p-2 rounded-lg text-white font-bold">
+            Tasks
+          </h3>
           <ol>
             {tasks.map((task, index) => (
-              <li key={index} className="task-item">
-                {`${index+1}. ${task}`}
+              <li key={index} className="task-item text-xl">
+                {`${index + 1}. ${task}`}
                 <span>
-                  <a title="Remove">
-                    <button
-                      onClick={() => removeTask(index)}
-                      className="remove">
-                      {remove_icon}
-                    </button>
-                  </a>
-                  <button onClick={() => handleUpMove(index)} className="up-btn">{upIcon}</button>
-                  <button onClick={() => handleDownMove(index)} className="down-btn">
+                  <button onClick={() => removeTask(index)} className="remove text-black">
+                    {remove_icon}
+                  </button>
+
+                  <button
+                    onClick={() => handleUpMove(index)}
+                    className="up-btn text-black"
+                    title="up"
+                  >
+                    {upIcon}
+                  </button>
+                  <button
+                    onClick={() => handleDownMove(index)}
+                    className="down-btn text-black" title="down"
+                  >
                     {downIcon}
                   </button>
                 </span>
@@ -103,19 +111,17 @@ function App() {
           </ol>
         </div>
         <div className="removed-list">
-          <h3>Completed tasks</h3>
+          <h3 className="text-xl bg-green-500 w-fit mx-auto p-2 rounded-lg text-white font-bold">
+            Completed Tasks
+          </h3>
           <ol>
             {removetasks.map((task, index) => (
-              <li key={index} className="removed-item">
+              <li key={index} className="removed-item p-2 text-xl text-black">
                 {task}
                 <span>
-                  <a title="Remove">
-                    <button
-                      onClick={() => deleteTask(index)}
-                      className="remove">
-                      {remove_icon}
-                    </button>
-                  </a>
+                  <button onClick={() => deleteTask(index)} className="remove">
+                    {remove_icon}
+                  </button>
                 </span>
               </li>
             ))}
